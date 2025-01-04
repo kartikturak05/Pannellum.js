@@ -5,45 +5,53 @@ const viewer = pannellum.viewer('panorama', {
     scenes: {
       scene1: {
         type: 'equirectangular',
-        panorama: 'panoromaImage.jpg',
+        panorama: 'floor.jpeg',
         autoLoad: true,
-        mousedown: function(event) {
-          // Log the current yaw and pitch on click
-          const pitch = viewer.getPitch(); // Get the pitch value
-          const yaw = viewer.getYaw(); // Get the yaw value
-          alert(`Hotspot position: pitch=${pitch}, yaw=${yaw}`);
-        },
         hotSpots: [
           {
-            pitch: -43.92, // Vertical position of the hotspot
-            yaw: 123.23, // Horizontal position of the hotspot
+            pitch:  -39.36, // Vertical position of the hotspot
+            yaw: 28.13, // Horizontal position of the hotspot
             type: 'scene', // Hotspot type (for a clickable point)
-            text: 'Go to Second Panorama', // Tooltip text
+            text: 'Go Inside Bedroom', // Tooltip text
             clickHandlerFunc: () => viewer.loadScene('scene2'), // Load second scene
           },
         ],
       },
       scene2: {
-        type: 'equirectangular',
-        panorama: 'panoromaImage2.jpg',
+        // type: 'cubemap',
+        // cubeMap: [
+        //     './room1.jpeg', './room2.jpeg',
+        //     './room1.jpeg', './room2.jpeg',
+        //     './room1.jpeg', './room2.jpeg',
+        // ],
+        type:'equirectangular',
+        panorama: 'room3.jpeg',
         autoLoad: true,
+        hfov: 360,
         hotSpots: [
           {
-            pitch: -5,
-            yaw: -45,
-            type: 'info',
-            text: 'Back to First Panorama',
-            clickHandlerFunc: () => viewer.loadScene('scene1'), // Back to first scene
+            pitch: -12,
+            yaw: 160.65,
+            type: 'scene',
+            text: 'Go inside the Washroom',
+            clickHandlerFunc: () => viewer.loadScene('scene3'), // Back to first scene
+          },
+        ],
+      },
+      scene3: {
+        type: 'equirectangular',
+        panorama: 'washroom.jpeg',
+        autoLoad: true,
+        hfov: 360,
+        hotSpots: [
+          {
+            pitch: -12,
+            yaw: 160.65,
+            type: 'scene',
+            text: 'Go inside the Bedroom',
+            clickHandlerFunc: () => viewer.loadScene('scene2'), // Back to first scene
           },
         ],
       },
     },
   });
-
-
-  viewer.on('click', () => {
-    const pitch = viewer.getPitch();
-    const yaw = viewer.getYaw();
-    console.log(`Current pitch: ${pitch}, Current yaw: ${yaw}`);
-  });
-  
