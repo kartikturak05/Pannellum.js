@@ -6,6 +6,7 @@ const viewer = pannellum.viewer('panorama', {
       scene1: {
         type: 'equirectangular',
         panorama: 'floor.jpeg',
+        // panorama: 'side.jpeg',
         autoLoad: true,
         hotSpots: [
           {
@@ -18,16 +19,20 @@ const viewer = pannellum.viewer('panorama', {
         ],
       },
       scene2: {
-        // type: 'cubemap',
-        // cubeMap: [
-        //     './room1.jpeg', './room2.jpeg',
-        //     './room1.jpeg', './room2.jpeg',
-        //     './room1.jpeg', './room2.jpeg',
-        // ],
-        type:'equirectangular',
-        panorama: 'room3.jpeg',
+        type: 'cubemap',
+        cubeMap: [
+            'front.jpeg',   // right face
+             'wall.jpeg',  // left face
+            'side.jpeg',  // top face
+             'side.jpeg', // bottom face
+            'wall.jpeg',  // front face
+             'wall.jpeg',  // back face
+        ],
+
+        //  type:'equirectangular',
+        // panorama: 'bedroom.webp',
         autoLoad: true,
-        hfov: 360,
+        // hfov: 120,
         hotSpots: [
           {
             pitch: -12,
