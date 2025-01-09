@@ -4,14 +4,14 @@ src = 'floor.jpeg';
 const mallone = document.getElementById('mallone');
 
 mallone.addEventListener('click', () => {
-  src = 'mall.webp';
+  src = 'panoromaMall1.jpg';
   show(src);
 })
 
 const malltwo = document.getElementById('malltwo');
 
 malltwo.addEventListener('click', () => {
-  src = 'mall2.webp';
+  src = 'panoramicMall2.jpeg';
   show(src);
 })
 
@@ -75,7 +75,7 @@ function show (srcimg){
          type:'equirectangular',
         panorama: srcimg,
         autoLoad: true,
-        hfov: 300,
+        // hfov: 300,
         // hotSpots: [
         //   {
         //     pitch: -12,
