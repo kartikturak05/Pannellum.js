@@ -11,14 +11,15 @@ mallone.addEventListener('click', () => {
 const malltwo = document.getElementById('malltwo');
 
 malltwo.addEventListener('click', () => {
-  src = 'panoramicMall2.jpeg';
+  src = 'panoramicMall.webp';
   show(src);
 })
 
 const mallthree = document.getElementById('mallthree');
 
 mallthree.addEventListener('click', () => {
-  src = 'mall3.webp';
+  // src = 'panormaicImage2.jpg';
+  src = 'panoramicImage6.jpg';
   show(src);
 })
 
@@ -35,6 +36,43 @@ stadium.addEventListener('click', () => {
   src = 'stadium2.webp';
   show(src);
 })
+
+
+const image1 = document.getElementById('image1');
+
+image1.addEventListener('click', () => {
+  src = 'panoramicImage1.jpg';
+  show(src);
+})
+
+const image2 = document.getElementById('image2');
+
+image2.addEventListener('click', () => {
+  src = 'panoramicImage2.jpg';
+  show(src);
+})
+
+const image3 = document.getElementById('image3');
+
+image3.addEventListener('click', () => {
+  src = 'panoramicImage3.jpg';
+  show(src);
+})
+
+const image4 = document.getElementById('image4');
+
+image4.addEventListener('click', () => {
+  src = 'panoramicImage10.jpg';
+  show(src);
+})
+
+const image5 = document.getElementById('image5');
+
+image5.addEventListener('click', () => {
+  src = 'panoramicImage11.jpg';
+  show(src);
+})
+
 
 
 
