@@ -73,7 +73,41 @@ image5.addEventListener('click', () => {
   show(src);
 })
 
+const image6 = document.getElementById('image6');
 
+image6.addEventListener('click', () => {
+  src = 'panoramicImage14.jpeg';
+  show(src);
+})
+
+const image7 = document.getElementById('image7');
+
+image7.addEventListener('click', () => {
+  src = 'panoramicImage13.jpeg';
+  show(src);
+})
+
+
+const image8 = document.getElementById('image8');
+
+image8.addEventListener('click', () => {
+  src = 'panoramicImage15.jpeg';
+  show(src);
+})
+
+const image9 = document.getElementById('image9');
+
+image9.addEventListener('click', () => {
+  src = 'panoramicImage16.jpeg';
+  show(src);
+})
+
+const image10 = document.getElementById('image10');
+
+image7.addEventListener('click', () => {
+  src = 'panoramicImage17.jpeg';
+  show(src);
+})
 
 
 
